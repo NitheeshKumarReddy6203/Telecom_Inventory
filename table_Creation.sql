@@ -57,19 +57,17 @@ INSERT INTO Transactions (username, product_name, quantity) VALUES
 ('staff_user', 'Mobile Phone', 10),
 ('staff_user', 'Laptop', 5);
 
-
 CREATE TABLE Staff (
     staff_name VARCHAR(100) NOT NULL,
     staff_email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
     staff_phone_number VARCHAR(20),
-    staff_joined_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    staff_country VARCHAR(100)
+    staff_joined_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO Staff (staff_name, staff_email, staff_phone_number, staff_joined_date, staff_country) VALUES
-('John Doe', 'john.doe@example.com', '1234567890', CURRENT_TIMESTAMP, 'USA'),
-('Jane Smith', 'jane.smith@example.com', '0987654321', CURRENT_TIMESTAMP, 'Canada');
-
+('John Doe', 'john.doe@example.com', 'PassKey456', '1234567890', CURRENT_TIMESTAMP),
+('Jane Smith', 'jane.smith@example.com', 'PassKey7788', '0987654321', CURRENT_TIMESTAMP);
 
 CREATE TABLE IF NOT EXISTS Admin (
     admin_email VARCHAR(100) PRIMARY KEY,
