@@ -57,7 +57,7 @@ INSERT INTO Transactions (product_name, transaction_type, quantity, transaction_
 ('Mobile Phone', 'IN', 500, '2025-01-04 12:00:00'),
 ('Laptop', 'OUT', 15, '2025-01-04 12:00:00');
 
-CREATE TABLE Staff (
+CREATE TABLE staff (
     staff_name VARCHAR(100) NOT NULL,
     staff_email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(100) NOT NULL,
