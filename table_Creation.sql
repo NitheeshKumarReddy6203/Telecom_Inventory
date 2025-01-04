@@ -19,7 +19,6 @@ INSERT INTO Users (username, password, email, country, phone_number) VALUES
 CREATE TABLE Products (
     product_name VARCHAR(100) NOT NULL, 
     description TEXT, 
-    product_image VARCHAR(255),
     product_category VARCHAR(50),
     model_number VARCHAR(50),
     serial_number VARCHAR(50) UNIQUE,
@@ -48,11 +47,10 @@ INSERT INTO Suppliers (supplier_name, supplier_email, supplier_contact) VALUES
 ('Supplier B', 'supplierB@example.com', '0987654321');
 
 CREATE TABLE Transactions (
-    username VARCHAR(50),
     product_name VARCHAR(100),
-    quantity INT NOT NULL, 
     transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (username, product_name, transaction_date)
+    quantity INT NOT NULL, 
+    PRIMARY KEY (product_name, transaction_date, quantity)
 );
 
 INSERT INTO Transactions (username, product_name, quantity) VALUES
@@ -67,7 +65,6 @@ CREATE TABLE Staff (
     staff_joined_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     staff_country VARCHAR(100)
 );
-
 
 INSERT INTO Staff (staff_name, staff_email, staff_phone_number, staff_joined_date, staff_country) VALUES
 ('John Doe', 'john.doe@example.com', '1234567890', CURRENT_TIMESTAMP, 'USA'),
