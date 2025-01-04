@@ -69,7 +69,7 @@ INSERT INTO Staff (staff_name, staff_email, staff_phone_number, staff_joined_dat
 ('John Doe', 'john.doe@example.com', 'PassKey456', '1234567890', CURRENT_TIMESTAMP),
 ('Jane Smith', 'jane.smith@example.com', 'PassKey7788', '0987654321', CURRENT_TIMESTAMP);
 
-CREATE TABLE IF NOT EXISTS Admin (
+CREATE TABLE IF NOT EXISTS admin (
     email VARCHAR(100) PRIMARY KEY,
     password VARCHAR(255) NOT NULL
 );
