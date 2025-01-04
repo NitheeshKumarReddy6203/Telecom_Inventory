@@ -48,14 +48,14 @@ INSERT INTO Suppliers (supplier_name, supplier_email, supplier_contact) VALUES
 
 CREATE TABLE Transactions (
     product_name VARCHAR(100),
-    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    quantity INT NOT NULL, 
-    PRIMARY KEY (product_name, transaction_date, quantity)
+    transaction_type ENUM('IN', 'OUT') NOT NULL,
+    quantity INT NOT NULL,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO Transactions (username, product_name, quantity) VALUES
-('staff_user', 'Mobile Phone', 10),
-('staff_user', 'Laptop', 5);
+INSERT INTO Transactions (product_name, transaction_type, quantity, transaction_date ) VALUES
+('Mobile Phone', 'IN', 500),
+('Laptop', 'OUT', 15);
 
 CREATE TABLE Staff (
     staff_name VARCHAR(100) NOT NULL,
