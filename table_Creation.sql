@@ -53,9 +53,9 @@ CREATE TABLE Transactions (
     transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO Transactions (product_name, transaction_type, quantity, transaction_date ) VALUES
-('Mobile Phone', 'IN', 500),
-('Laptop', 'OUT', 15);
+INSERT INTO Transactions (product_name, transaction_type, quantity, transaction_date) VALUES
+('Mobile Phone', 'IN', 500, '2025-01-04 12:00:00'),
+('Laptop', 'OUT', 15, '2025-01-04 12:00:00');
 
 CREATE TABLE Staff (
     staff_name VARCHAR(100) NOT NULL,
