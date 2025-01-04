@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    Inventory Management
+</header>
+
+<div class="container">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="Cisco ISR 1101" class="product-img">
+        <div class="product-info">
+            <div class="product-title">Cisco ISR 1101</div>
+            <div class="product-description">High-performance integrated service router for branch offices.</div>
+            <div class="product-price">$499.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="HP 5406zl" class="product-img">
+        <div class="product-info">
+            <div class="product-title">HP 5406zl</div>
+            <div class="product-description">A versatile switch for enterprise networks with high scalability.</div>
+            <div class="product-price">$799.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="DOCSIS 3.1 Cable Modem" class="product-img">
+        <div class="product-info">
+            <div class="product-title">DOCSIS 3.1 Cable Modem</div>
+            <div class="product-description">Advanced modem for high-speed internet connectivity.</div>
+            <div class="product-price">$149.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="Cellular Duplexer Rx" class="product-img">
+        <div class="product-info">
+            <div class="product-title">Cellular Duplexer Rx</div>
+            <div class="product-description">Cellular duplexer for Rx signal reception in communication systems.</div>
+            <div class="product-price">$299.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="SBB100 Splitter Trough Block" class="product-img">
+        <div class="product-info">
+            <div class="product-title">SBB100 Splitter Trough Block</div>
+            <div class="product-description">Splitter trough block for RF signal distribution in telecom systems.</div>
+            <div class="product-price">$119.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="Proximity Card" class="product-img">
+        <div class="product-info">
+            <div class="product-title">Proximity Card</div>
+            <div class="product-description">RFID proximity card for secure access systems.</div>
+            <div class="product-price">$29.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="DOCSIS 3.0 16x4 (CM500)" class="product-img">
+        <div class="product-info">
+            <div class="product-title">DOCSIS 3.0 16x4 (CM500)</div>
+            <div class="product-description">Cable modem with DOCSIS 3.0 support for high-speed internet.</div>
+            <div class="product-price">$129.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="DOCSIS 3.1 Cable Modem (CM1100)" class="product-img">
+        <div class="product-info">
+            <div class="product-title">DOCSIS 3.1 Cable Modem (CM1100)</div>
+            <div class="product-description">Next-generation DOCSIS 3.1 cable modem for enhanced speed.</div>
+            <div class="product-price">$179.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="CMOS 40G Serial Mux" class="product-img">
+        <div class="product-info">
+            <div class="product-title">CMOS 40G Serial Mux</div>
+            <div class="product-description">High-speed serial multiplexer for fiber-optic networks.</div>
+            <div class="product-price">$899.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="DOCSIS 3.0 24x8 Cable Modem (CM600)" class="product-img">
+        <div class="product-info">
+            <div class="product-title">DOCSIS 3.0 24x8 Cable Modem (CM600)</div>
+            <div class="product-description">High-performance DOCSIS 3.0 modem for stable internet.</div>
+            <div class="product-price">$169.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="RF Combiner" class="product-img">
+        <div class="product-info">
+            <div class="product-title">RF Combiner</div>
+            <div class="product-description">RF combiner for signal integration in communication systems.</div>
+            <div class="product-price">$79.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="Cisco ISR 1100" class="product-img">
+        <div class="product-info">
+            <div class="product-title">Cisco ISR 1100</div>
+            <div class="product-description">Reliable integrated service router for small offices.</div>
+            <div class="product-price">$599.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="HP 5400zl" class="product-img">
+        <div class="product-info">
+            <div class="product-title">HP 5400zl</div>
+            <div class="product-description">Enterprise-level switch for high-performance networking.</div>
+            <div class="product-price">$899.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="DOCSIS 3.0 Cable Modem" class="product-img">
+        <div class="product-info">
+            <div class="product-title">DOCSIS 3.0 Cable Modem</div>
+            <div class="product-description">Reliable DOCSIS 3.0 modem for stable internet connectivity.</div>
+            <div class="product-price">$109.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/220x200" alt="WR90 Duplexer" class="product-img">
+        <div class="product-info">
+            <div class="product-title">WR90 Duplexer</div>
+            <div class="product-description">Duplexer for RF signal splitting in communication systems.</div>
+            <div class="product-price">$249.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Inventory Management. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
